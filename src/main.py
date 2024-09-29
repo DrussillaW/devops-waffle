@@ -25,11 +25,11 @@ def get_data_atual():
 
 
 @app.get("/quadrado")
-def quadrado(x: int = None):
+def quadrado(qs_x: int = None):
     """
     Função que retorna o quadrado de um inteiro.
     """
-    if x is not None:
-        return {"quadrado": x * x}
-    else:
-        return {"message": "x não encontrado no query param"}
+    if qs_x is not None:
+        return {"quadrado": qs_x * qs_x}
+
+    return {"message": "x não encontrado no query param"}
