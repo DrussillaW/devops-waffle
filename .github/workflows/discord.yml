@@ -8,14 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Send to Discord
-        run: | 
-          curl -H "Content-Type: application/json" 
-          -d '{"content": "Successful commit to **{{ github.context.payload.repository.owner.name }}/{{ github.context.payload.repository.name}}**"}' 
-          ${{ secrets.DISCORD_WEBHOOK }}
-#      - name: Discord Commits
-#        uses: Sniddl/discord-commits@v1.6
-#        with:
-#          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-#          template: "avatar-with-link"
-#          include-extras: true
+      - name: Discord Commits
+        uses: Sniddl/discord-commits@v1.6
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          template: "simple-link"
+          include-extras: true
