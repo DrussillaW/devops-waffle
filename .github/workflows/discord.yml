@@ -12,5 +12,5 @@ jobs:
         uses: Sniddl/discord-commits@v1.6
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          template: "simple-link"
+          template: "author-with-link"
           include-extras: true
