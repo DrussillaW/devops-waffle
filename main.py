@@ -20,4 +20,3 @@ def get_data_atual():
     Função que retorna a data e hora atuais.
     """
     return {"data_atual": datetime.now().strftime("%d/%m/%Y - %H:%M")}
-
